@@ -1,0 +1,26 @@
+stages:
+  - build
+  - deploy
+
+step-build:
+  stage: build
+  tags:
+    - shell-tag
+  only:
+    - /^live_[0-9]+(?:.[0-9]+)+$/ # regular expression live_0.0.1, live_0.0.2, live_0.0.3, etc.
+    - /^dev_[0-9]+(?:.[0-9]+)+$/ # regular expression live_0.0.1, live_0.0.2, live_0.0.3, etc.
+  script:
+    - yarn
+    - yarn build
+    - docker build -t app/vue-demo .
+step-deploy-prod:
+  stage: deploy
+  tags:
+    - shell-tag
+  only:
+    - /^live_[0-9]+(?:.[0-9]+)+$/ # regular expression live_0.0.1, live_0.0.2, live_0.0.3, etc.
+    - /^dev_[0-9]+(?:.[0-9]+)+$/ # regular expression live_0.0.1, live_0.0.2, live_0.0.3, etc.
+  script:
+    - docker container rm -f Feuser || true
+    - docker run -d -p 80:80 --name Feuser app/vue-demo
+    - docker image prune -a -f

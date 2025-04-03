@@ -1,0 +1,45 @@
+{
+  "name": "vue3-storybook",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "sta": "copy env.stage .env && vite --host",
+    "build": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "prod": "copy src\\env\\.env.production .env && vite --host",
+    "dev": "copy src\\env\\.env.development .env && vite --host",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "pinia": "^2.1.7",
+    "swiper": "^11.2.6",
+    "vue": "^3.4.21",
+    "vue-i18n": "10",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-vite": "^0.2.7",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/vue3": "^6.5.16",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "autoprefixer": "^10.4.19",
+    "babel-loader": "^8.3.0",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.13",
+    "tailwindcss": "^3.4.3",
+    "vite": "^4.5.3",
+    "vite-plugin-remove-console": "^2.2.0",
+    "vue-loader": "^16.8.3"
+  }
+}
