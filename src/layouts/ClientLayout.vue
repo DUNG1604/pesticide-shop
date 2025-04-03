@@ -3,7 +3,7 @@ import HeaderClient from "@/components/header/HeaderClient.vue";
 </script>
 
 <template>
-  <section class="min-h-screen">
+  <section class="container">
     <HeaderClient></HeaderClient>
     <router-view />
   </section>
