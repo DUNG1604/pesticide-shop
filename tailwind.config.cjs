@@ -35,9 +35,13 @@ module.exports = {
       },
       colors: {
         title: "#143324",
+        title1: "#f79121",
+        title2: "#E57B18",// Màu cam
         primary: "#057134", // Màu chính (xanh lá)
-        secondary: "#90ca38",  // Màu phụ (xanh lá nhạt)
-        danger: "#dc3545",   // Màu cảnh báo (đỏ)
+        secondary: "#90ca38",
+        secondary2: "#0B7B4D", //mau button
+        secondary3: "#338C6B", //màu hover button
+        bg1: "#eeeee6",   // Màu nền 1 (xám nhạt)
         warning: "#ffc107",  // Màu cảnh báo nhẹ (vàng)
         info: "#17a2b8",     // Màu thông tin (xanh ngọc)
         light: "#f8f9fa",    // Màu nền sáng

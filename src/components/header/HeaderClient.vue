@@ -31,8 +31,8 @@ const menuItems = [
 </script>
 
 <template>
-  <div class="container font-sans">
-    <header class="flex justify-between gap-4 wrapper px-4 py-2.5">
+  <div class="container font-sans fixed top-0 z-[99999999] bg-white">
+    <header class="flex justify-between gap-4 wrapper px-4 bg-white py-[25px]">
       <div class="w-[250px] h-[60px]">
         <img class="w-full h-full object-cover" src="@/assets/images/logo.jpg" alt="logo">
       </div>
