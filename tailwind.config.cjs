@@ -34,13 +34,26 @@ module.exports = {
         slideIn: "slideIn 0.1s ease-out"
       },
       colors: {
+        // Màu chủ đạo
+        green_1: "#057134",
+        green_2: "#43b443",
+        green_3: "#8cc644",
+        green_4: "#dde635",
+        // Button
+        button_green: "#43b443",
+        button_hover: "#3fa63f",
+        // Text
+        text_main: "#143324",
+        text_orange:"#f09521",
+        // Background
         title: "#143324",
         title1: "#f79121",
         title2: "#E57B18",// Màu cam
-        primary: "#057134", // Màu chính (xanh lá)
+        primary1: "#057134",
+        primary: "#43b443",// Màu chính (xanh lá)
         secondary: "#90ca38",
-        secondary2: "#0B7B4D", //mau button
-        secondary3: "#338C6B", //màu hover button
+        secondary2: "#43b443", //mau button
+        secondary3: "#3fa63f", //màu hover button
         bg1: "#eeeee6",   // Màu nền 1 (xám nhạt)
         warning: "#ffc107",  // Màu cảnh báo nhẹ (vàng)
         info: "#17a2b8",     // Màu thông tin (xanh ngọc)
@@ -58,6 +71,8 @@ module.exports = {
           'max-width': '1200px',
           'margin-left': 'auto',
           'margin-right': 'auto',
+          'padding-left': '8px',
+          'padding-right': '8px',
         }
       });
     }

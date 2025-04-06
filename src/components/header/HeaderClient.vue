@@ -32,64 +32,37 @@ const menuItems = [
 
 <template>
   <div class="container font-sans fixed top-0 z-[99999999] bg-white">
-    <header class="flex justify-between gap-4 wrapper px-4 bg-white py-[25px]">
-      <div class="w-[250px] h-[60px]">
+    <header class="flex justify-between gap-4 wrapper px-4 bg-white py-[20px]">
+      <div class="w-[200px]">
         <img class="w-full h-full object-cover" src="@/assets/images/logo.jpg" alt="logo">
       </div>
-      <div>
-        <div class="flex">
-          <div class="flex items-center gap-2">
-            <div class="size-[35px] overflow-hidden">
-              <img class="w-full h-full object-cover" src="@/assets/images/phone.png" alt="logo">
-            </div>
-            <div class="text-sm text-title">
-              <div class="font-bold mb-1">1-800-476-3368</div>
-              <div>Hablamos Espanol</div>
-              <div>extension: 7103</div>
-            </div>
-          </div>
-          <div class="mx-4 w-[1px] h-[50px] bg-black"></div>
-          <!--      -->
-          <div class="flex items-center gap-2">
-            <div class="size-[35px] overflow-hidden">
-              <img class="w-full h-full object-cover" src="@/assets/images/phone.png" alt="logo">
-            </div>
-            <div class="text-sm text-title">
-              <div class="font-bold mb-1">1-800-476-3368</div>
-              <div>Hablamos Espanol</div>
-              <div>extension: 7103</div>
-            </div>
-          </div>
-          <div class="mx-4 w-[1px] h-[50px] bg-black"></div>
-          <!--      -->
-          <div class="flex items-center gap-2">
-            <div class="size-[35px] overflow-hidden">
-              <img class="w-full h-full object-cover" src="@/assets/images/phone.png" alt="logo">
-            </div>
-            <div class="text-sm text-title">
-              <div class="font-bold mb-1">1-800-476-3368</div>
-              <div>Hablamos Espanol</div>
-              <div>extension: 7103</div>
-            </div>
-          </div>
+      <div class="flex flex-1 px-10">
+        <div class="flex-1 h-12">
+          <input class="w-full outline-primary border-secondary border-[2px] px-4 h-full rounded-[5px]" placeholder="Search" type="text">
         </div>
-<!--        <div class="flex flex-col flex-1 max-w-2xl mx-4">-->
-<!--          <input-->
-<!--            type="text"-->
-<!--            placeholder="Search entire store here..."-->
-<!--            class="w-full px-4 py-2 border rounded-md text-black focus:outline-none focus:ring-2 focus:ring-primary"-->
-<!--          />-->
-<!--        </div>-->
+        <div>
+          <button class="rounded-[5px] h-12 ml-4 px-5 bg-secondary2 text-white cursor-pointer hover:bg-secondary3 hover:text-white">
+            Search
+          </button>
+        </div>
       </div>
-      <div class="flex items-start">
-        <div class="flex gap-1 items-center">
-          <div class="size-[20px] overflow-hidden">
-            <img class="size-full object-cover" src="@/assets/icons/vietnam.png" alt="vn">
-          </div>
-          <div class="flex-1 font-sans text-[12px] font-[600]">Tiếng Việt</div>
-          <div class="size-[20px] overflow-hidden">
-            <img class="size-full object-cover" src="@/assets/icons/down.svg" alt="vn">
-          </div>
+      <div class="w-[110px] flex justify-end items-center">
+<!--        <div class="flex gap-1 items-center">-->
+<!--          <div class="size-[20px] overflow-hidden">-->
+<!--            <img class="size-full object-cover" src="@/assets/icons/vietnam.png" alt="vn">-->
+<!--          </div>-->
+<!--          <div class="flex-1 font-sans text-[12px] font-[600]">Tiếng Việt</div>-->
+<!--          <div class="size-[20px] overflow-hidden">-->
+<!--            <img class="size-full object-cover" src="@/assets/icons/down.svg" alt="vn">-->
+<!--          </div>-->
+<!--        </div>-->
+        <div class="flex items-center text-green_1">
+          <span class="material-symbols-outlined">
+            account_circle
+          </span>
+          <span class="material-symbols-outlined">
+            shopping_cart
+          </span>
         </div>
       </div>
     </header>
