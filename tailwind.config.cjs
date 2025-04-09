@@ -39,6 +39,8 @@ module.exports = {
         green_2: "#43b443",
         green_3: "#8cc644",
         green_4: "#dde635",
+        orange_1: "#E57B18",
+        orange_2: "#f09521",
         // Button
         button_green: "#43b443",
         button_hover: "#3fa63f",

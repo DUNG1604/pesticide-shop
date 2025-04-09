@@ -32,6 +32,14 @@ const menuItems = [
 
 <template>
   <div class="container font-sans fixed top-0 z-[99999999] bg-white">
+    <div class="flex justify-end wrapper">
+      <div class="flex items-center gap-2">
+        <div>
+          <i class="fa-solid fa-phone text-text_main text-[14px]"></i>
+        </div>
+        <div class="text-text_main text-[12px] font-semibold">0123-456-789</div>
+      </div>
+    </div>
     <header class="flex justify-between gap-4 wrapper px-4 bg-white py-[20px]">
       <div class="w-[200px]">
         <img class="w-full h-full object-cover" src="@/assets/images/logo.jpg" alt="logo">
@@ -56,13 +64,14 @@ const menuItems = [
 <!--            <img class="size-full object-cover" src="@/assets/icons/down.svg" alt="vn">-->
 <!--          </div>-->
 <!--        </div>-->
-        <div class="flex items-center text-green_1">
-          <span class="material-symbols-outlined">
-            account_circle
-          </span>
-          <span class="material-symbols-outlined">
-            shopping_cart
-          </span>
+        <div class="flex items-center text-green_1 gap-2">
+          <div class="cursor-pointer relative">
+            <div class="absolute top-[-6px] right-[-6px] rounded-full size-[18px] bg-orange_1 text-white flex items-center justify-center text-[12px] font-bold">0</div>
+            <i class="fa-solid fa-cart-shopping text-[28px]"></i>
+          </div>
+          <div class="cursor-pointer">
+            <i class="fa-solid fa-circle-user text-[28px]"></i>
+          </div>
         </div>
       </div>
     </header>

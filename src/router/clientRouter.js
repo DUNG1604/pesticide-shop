@@ -6,7 +6,7 @@ const clientRouter = [
     },
     {
         path: ':id',
-        name: "HomeClient",
+        name: "Detail",
         component: () => import("@/pages/client/detailProduct/Page.vue"),
     },
 ]

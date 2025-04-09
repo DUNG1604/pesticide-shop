@@ -8,7 +8,9 @@ import {
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useRouter } from "vue-router";
 
+const router = useRouter();
 const images = [
   "https://live.staticflickr.com/2919/32726853103_ac1707e094_z.jpg",
   "https://cdn.fpt-is.com/vi/nong-nghiep-xanh-11-1717331444.jpg",
@@ -166,7 +168,7 @@ const products = [
 <template>
   <div class="container">
     <div class="flex items-center justify-center gap-4 py-3 ">
-      <div class="text-title2 font-bold">PEST CONTROL SUPPLIES & LAWN CARE PRODUCTS</div>
+      <div class="text-orange_1 font-bold">PEST CONTROL SUPPLIES & LAWN CARE PRODUCTS</div>
       <div
         class="px-5 py-2.5 border-[2px] border-primary rounded-[5px] text-title cursor-pointer hover:bg-secondary2 hover:text-white">
         Start Shopping
@@ -195,8 +197,8 @@ const products = [
                 <img src="@/assets/images/item1.webp" alt="">
               </div>
               <div class="col-span-2 text-[18px] font-bold px-1.5">
-                <div class="text-title">Pest Control Products</div>
-                <div class="flex text-title2 cursor-pointer">Shop All <img class="w-[16px]" src="@/assets/icons/nextOrange.svg" alt=""></div>
+                <div class="text-text_main">Pest Control Products</div>
+                <div @click="()=> router.push('/1')" class="flex text-orange_1 cursor-pointer">Shop All <img class="w-[16px]" src="@/assets/icons/nextOrange.svg" alt=""></div>
               </div>
             </div>
             <div class="grid grid-cols-3 px-2 py-4 custom-shadow rounded-[4px] mt-5">
@@ -204,8 +206,8 @@ const products = [
                 <img src="@/assets/images/item1.webp" alt="">
               </div>
               <div class="col-span-2 text-[18px] font-bold px-1.5">
-                <div class="text-title">Pest Control Products</div>
-                <div class="flex text-title2 cursor-pointer">Shop All <img class="w-[16px]" src="@/assets/icons/nextOrange.svg" alt=""></div>
+                <div class="text-text_main">Pest Control Products</div>
+                <div class="flex text-orange_1 cursor-pointer">Shop All <img class="w-[16px]" src="@/assets/icons/nextOrange.svg" alt=""></div>
               </div>
             </div>
             <div class="grid grid-cols-3 px-2 py-4 custom-shadow rounded-[4px] mt-5">
@@ -213,24 +215,24 @@ const products = [
                 <img src="@/assets/images/item1.webp" alt="">
               </div>
               <div class="col-span-2 text-[18px] font-bold px-1.5">
-                <div class="text-title">Pest Control Products</div>
-                <div class="flex text-title2 cursor-pointer">Shop All <img class="w-[16px]" src="@/assets/icons/nextOrange.svg" alt=""></div>
+                <div class="text-text_main">Pest Control Products</div>
+                <div class="flex text-orange_1 cursor-pointer">Shop All <img class="w-[16px]" src="@/assets/icons/nextOrange.svg" alt=""></div>
               </div>
             </div>
           </div>
         </div>
       </div>
 <!--      -->
-      <div class="text-title flex justify-between items-center rounded-[5px] overflow-hidden border-[2px] border-secondary2 mt-[30px]">
+      <div class="text-text_main flex justify-between items-center rounded-[5px] overflow-hidden border-[2px] border-secondary2 mt-[30px]">
         <div class="ml-4">
           <p><i class="fa fa-info-circle text-title2" aria-hidden="true"></i> Are you a <strong>Pest Management Professional</strong>?</p>
         </div>
         <div class="flex items-center">
           <p class="mr-6">You could receive: </p>
           <ul class="flex gap-4 py-6">
-            <li><i class="fa fa-check text-title2" aria-hidden="true"></i> Volume Discounts</li>
-            <li><i class="fa fa-check text-title2" aria-hidden="true"></i> Priority Shipping</li>
-            <li><i class="fa fa-check text-title2" aria-hidden="true"></i> Deals &amp; More</li>
+            <li><i class="fa fa-check text-orange_1" aria-hidden="true"></i> Volume Discounts</li>
+            <li><i class="fa fa-check text-orange_1" aria-hidden="true"></i> Priority Shipping</li>
+            <li><i class="fa fa-check text-orange_1" aria-hidden="true"></i> Deals &amp; More</li>
           </ul>
           <button
             class="ml-4 px-5 py-6 bg-secondary2 text-white cursor-pointer hover:bg-secondary3 hover:text-white">
