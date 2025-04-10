@@ -32,10 +32,17 @@ const menuItems = [
 
 <template>
   <div class="container font-sans fixed top-0 z-[99999999] bg-white">
-    <div class="flex justify-end wrapper">
-      <div class="flex items-center gap-2">
-        <div>
-          <i class="fa-solid fa-phone text-text_main text-[14px]"></i>
+    <div class="flex justify-end wrapper items-center gap-3">
+      <div class="flex items-center gap-1">
+        <div class="pb-1">
+          <i class="fa-solid fa-phone text-text_main text-[12px]"></i>
+        </div>
+        <div class="text-text_main text-[12px] font-semibold">0123-456-789</div>
+      </div>
+<!--      <div class="w-[1px] h-2 bg-text_main mx-2"></div>-->
+      <div class="flex items-center gap-1">
+        <div class="pb-1">
+          <i class="fa-solid fa-envelope text-text_main text-[14px]"></i>
         </div>
         <div class="text-text_main text-[12px] font-semibold">0123-456-789</div>
       </div>
@@ -65,6 +72,9 @@ const menuItems = [
 <!--          </div>-->
 <!--        </div>-->
         <div class="flex items-center text-green_1 gap-2">
+          <div class="cursor-pointer">
+            <i class="fa-solid fa-magnifying-glass text-[28px]"></i>
+          </div>
           <div class="cursor-pointer relative">
             <div class="absolute top-[-6px] right-[-6px] rounded-full size-[18px] bg-orange_1 text-white flex items-center justify-center text-[12px] font-bold">0</div>
             <i class="fa-solid fa-cart-shopping text-[28px]"></i>
@@ -93,13 +103,13 @@ const menuItems = [
             <!-- Dropdown con (đã fix lỗi bị mất khi hover) -->
             <div
               v-if="item.children"
-              class="absolute left-0 top-full mt-0 bg-white text-black shadow-md rounded-lg hidden group-hover:flex flex-col pointer-events-none"
+              class="absolute left-0 top-full bg-white text-text_main shadow-md rounded-[5px] hidden group-hover:block pointer-events-none"
             >
-              <ul class="w-48 py-2 pointer-events-auto">
+              <ul class="py-2 pointer-events-auto">
                 <li v-for="child in item.children" :key="child.path">
                   <router-link
                     :to="child.path"
-                    class="block px-4 py-2 hover:bg-gray-200"
+                    class="block text-[14px] px-4 py-2 hover:bg-gray-200"
                   >
                     {{ child.name }}
                   </router-link>

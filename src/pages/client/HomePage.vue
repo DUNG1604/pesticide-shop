@@ -241,23 +241,23 @@ const products = [
         </div>
       </div>
 <!--      -->
-      <div>
-        <h3 class="text-title text-[30px] text-center py-[30px]">Pest Control Products</h3>
-        <div class="grid grid-cols-6 gap-4">
-          <div v-for="(item, index) in items" :key="index" class="col-span-1 cursor-pointer group">
-            <div>
-              <img :src="item.image" :alt="item.alt" class="object-cover">
-            </div>
-            <div class="font-semibold text-center py-5 text-title group-hover:text-title2">{{ item.title }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="flex justify-center my-4">
-        <button
-          class="px-5 py-2.5 bg-secondary2  rounded-[5px] text-white cursor-pointer hover:bg-secondary3 hover:text-white">
-          View All
-        </button>
-      </div>
+<!--      <div>-->
+<!--        <h3 class="text-title text-[30px] text-center py-[30px]">Pest Control Products</h3>-->
+<!--        <div class="grid grid-cols-6 gap-4">-->
+<!--          <div v-for="(item, index) in items" :key="index" class="col-span-1 cursor-pointer group">-->
+<!--            <div>-->
+<!--              <img :src="item.image" :alt="item.alt" class="object-cover">-->
+<!--            </div>-->
+<!--            <div class="font-semibold text-center py-5 text-title group-hover:text-title2">{{ item.title }}</div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="flex justify-center my-4">-->
+<!--        <button-->
+<!--          class="px-5 py-2.5 bg-secondary2  rounded-[5px] text-white cursor-pointer hover:bg-secondary3 hover:text-white">-->
+<!--          View All-->
+<!--        </button>-->
+<!--      </div>-->
 <!--      -->
       <div>
         <h3 class="text-title text-[30px] text-center py-[30px]">Lawn & Garden Products</h3>
