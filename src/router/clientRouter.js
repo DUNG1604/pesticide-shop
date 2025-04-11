@@ -9,6 +9,11 @@ const clientRouter = [
         name: "Detail",
         component: () => import("@/pages/client/detailProduct/Page.vue"),
     },
+    {
+        path: 'cart',
+        name: "Cart",
+        component: () => import("@/pages/client/cart/Page.vue"),
+    },
 ]
 
 export default clientRouter
