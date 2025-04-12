@@ -6,6 +6,7 @@ import { createI18n } from 'vue-i18n';
 import App from './App.vue'
 import './assets/css/tailwind.css'
 import { messages } from "@/locales/index.js";
+import Antd from './plugins/Antd'
 
 const app = createApp(App)
 
@@ -18,6 +19,7 @@ const i18n = createI18n({
 
 app.use(pinia);
 app.use(router);
+app.use(Antd);
 app.use(i18n);
 
 app.mount('#app')

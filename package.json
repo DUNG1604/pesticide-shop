@@ -20,7 +20,10 @@
     "swiper": "^11.2.6",
     "vue": "^3.4.21",
     "vue-i18n": "10",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "ant-design-vue": "^4.2.6",
+    "vue-quill": "^1.5.1",
+    "@ant-design/icons-vue": "^7.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.24.3",
