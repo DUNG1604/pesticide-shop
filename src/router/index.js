@@ -28,7 +28,7 @@ const routes = [
     name: "AdminLayout",
     component: AdminLayout, 
     children: [...adminRouter]
-  }
+  },
 ]
 
 const router = createRouter({

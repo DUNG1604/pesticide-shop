@@ -24,6 +24,16 @@ const clientRouter = [
         name: "Settings",
         component: () => import("@/pages/profile/Settings.vue"),
     },
+    {
+        path: 'products',
+        name: 'products',
+        component: () => import('@/pages/products/index.vue')
+      },
+      {
+        path: 'products/:id',
+        name: 'product-detail',
+        component: () => import('@/pages/products/[id].vue')
+      }
 ]
 
 export default clientRouter

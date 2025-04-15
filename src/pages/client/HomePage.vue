@@ -169,7 +169,8 @@ const products = [
   <div class="container mx-auto px-4">
     <div class="flex flex-col md:flex-row items-center justify-center gap-4 py-3">
       <div class="text-orange_1 font-bold text-center md:text-left text-base md:text-lg">PEST CONTROL SUPPLIES & LAWN CARE PRODUCTS</div>
-      <div
+      <div 
+        @click="()=> router.push('/products')"
         class="px-5 py-2.5 border-[2px] border-primary rounded-[5px] text-title cursor-pointer hover:bg-secondary2 hover:text-white text-sm md:text-base">
         Start Shopping
       </div>
