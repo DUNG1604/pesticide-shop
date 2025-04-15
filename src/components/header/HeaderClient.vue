@@ -1,7 +1,11 @@
 <script setup>
 import { useRouter } from "vue-router";
+import { vOnClickOutside } from '@vueuse/components'
+import { ref } from "vue";
 
 const router = useRouter();
+const showDropdown = ref(false);
+const triggerRef = ref(null)
 const menuItems = [
   {
     name: "Pest Control",
@@ -31,7 +35,17 @@ const menuItems = [
   { name: "Learning Center", path: "/learning-center" }
 ];
 const handleChangePath = (path) =>{
-  router.push(path)
+  router.push(path);
+}
+const toggleDropdown = () => {
+  showDropdown.value = !showDropdown.value;
+}
+
+const onClickOutside = (event) => {
+  // Nếu click vào icon thì KHÔNG ẩn dropdown
+  if (triggerRef.value && triggerRef.value.contains(event.target)) return
+
+  showDropdown.value = false
 }
 </script>
 
@@ -52,7 +66,7 @@ const handleChangePath = (path) =>{
         <div class="text-text_main text-[12px] font-semibold">0123-456-789</div>
       </div>
     </div>
-    <header class="flex justify-between gap-4 wrapper px-4 bg-white py-[20px]">
+    <header class="flex justify-between gap-4 wrapper px-2 bg-white py-[20px]">
       <div @click="handleChangePath('/')" class="w-[200px] cursor-pointer">
         <img class="w-full h-full object-cover" src="@/assets/images/logo.jpg" alt="logo">
       </div>
@@ -84,8 +98,19 @@ const handleChangePath = (path) =>{
             <div class="absolute top-[-6px] right-[-6px] rounded-full size-[18px] bg-orange_1 text-white flex items-center justify-center text-[12px] font-bold">0</div>
             <i class="fa-solid fa-cart-shopping text-[28px]"></i>
           </div>
-          <div class="cursor-pointer">
-            <i class="fa-solid fa-circle-user text-[28px]"></i>
+          <div class="cursor-pointer relative">
+            <div v-if="showDropdown"
+                 v-on-click-outside="onClickOutside" class="absolute z-[99999999] bg-white rounded-[5px] p-2 custom-shadow top-[120%] right-0 whitespace-nowrap">
+              <div class="p-1 px-2 rounded-[5px] flex gap-1 items-end">
+                <i class="fa-solid fa-circle-user text-[20px]"></i>
+                <div class="font-bold">Andrew Ngô</div>
+              </div>
+              <div class="p-1 px-2 hover:bg-gray-200 rounded-[5px] flex gap-1 items-end mt-2">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <div class="text-[14px] font-semibold">Log Out</div>
+              </div>
+            </div>
+            <i ref="triggerRef" @click="toggleDropdown" class="fa-solid fa-circle-user text-[28px]"></i>
           </div>
         </div>
       </div>
@@ -129,5 +154,7 @@ const handleChangePath = (path) =>{
 </template>
 
 <style scoped>
-
+.custom-shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+}
 </style>
