@@ -14,6 +14,16 @@ const clientRouter = [
         name: "Cart",
         component: () => import("@/pages/client/cart/Page.vue"),
     },
+    {
+        path: 'profile',
+        name: "Profile",
+        component: () => import("@/pages/profile/Profile.vue"),
+    },
+    {
+        path: 'settings',
+        name: "Settings",
+        component: () => import("@/pages/profile/Settings.vue"),
+    },
 ]
 
 export default clientRouter

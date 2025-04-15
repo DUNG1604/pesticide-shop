@@ -166,18 +166,18 @@ const products = [
 </script>
 
 <template>
-  <div class="container">
-    <div class="flex items-center justify-center gap-4 py-3 ">
-      <div class="text-orange_1 font-bold">PEST CONTROL SUPPLIES & LAWN CARE PRODUCTS</div>
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4 py-3">
+      <div class="text-orange_1 font-bold text-center md:text-left text-base md:text-lg">PEST CONTROL SUPPLIES & LAWN CARE PRODUCTS</div>
       <div
-        class="px-5 py-2.5 border-[2px] border-primary rounded-[5px] text-title cursor-pointer hover:bg-secondary2 hover:text-white">
+        class="px-5 py-2.5 border-[2px] border-primary rounded-[5px] text-title cursor-pointer hover:bg-secondary2 hover:text-white text-sm md:text-base">
         Start Shopping
       </div>
     </div>
     <div class="wrapper">
       <div class="mt-[20px]">
-        <div class="grid grid-cols-3 gap-6 justify-center items-center">
-          <div class="col-span-2">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center items-center">
+          <div class="col-span-1 md:col-span-2">
             <swiper
               :modules="[SwiperAutoplay, SwiperPagination, SwiperNavigation]"
               :slides-per-view="1"
@@ -194,27 +194,27 @@ const products = [
           <div class="col-span-1">
             <div class="grid grid-cols-3 px-2 py-4 custom-shadow rounded-[4px]">
               <div class="col-span-1 px-1.5">
-                <img src="@/assets/images/item1.webp" alt="">
+                <img src="@/assets/images/item1.webp" alt="" class="w-full">
               </div>
-              <div class="col-span-2 text-[18px] font-bold px-1.5">
+              <div class="col-span-2 text-[14px] md:text-[18px] font-bold px-1.5">
                 <div class="text-text_main">Pest Control Products</div>
                 <div @click="()=> router.push('/1')" class="flex text-orange_1 cursor-pointer">Shop All <img class="w-[16px]" src="@/assets/icons/nextOrange.svg" alt=""></div>
               </div>
             </div>
             <div class="grid grid-cols-3 px-2 py-4 custom-shadow rounded-[4px] mt-5">
               <div class="col-span-1 px-1.5">
-                <img src="@/assets/images/item1.webp" alt="">
+                <img src="@/assets/images/item1.webp" alt="" class="w-full">
               </div>
-              <div class="col-span-2 text-[18px] font-bold px-1.5">
+              <div class="col-span-2 text-[14px] md:text-[18px] font-bold px-1.5">
                 <div class="text-text_main">Pest Control Products</div>
                 <div class="flex text-orange_1 cursor-pointer">Shop All <img class="w-[16px]" src="@/assets/icons/nextOrange.svg" alt=""></div>
               </div>
             </div>
             <div class="grid grid-cols-3 px-2 py-4 custom-shadow rounded-[4px] mt-5">
               <div class="col-span-1 px-1.5">
-                <img src="@/assets/images/item1.webp" alt="">
+                <img src="@/assets/images/item1.webp" alt="" class="w-full">
               </div>
-              <div class="col-span-2 text-[18px] font-bold px-1.5">
+              <div class="col-span-2 text-[14px] md:text-[18px] font-bold px-1.5">
                 <div class="text-text_main">Pest Control Products</div>
                 <div class="flex text-orange_1 cursor-pointer">Shop All <img class="w-[16px]" src="@/assets/icons/nextOrange.svg" alt=""></div>
               </div>
@@ -222,71 +222,53 @@ const products = [
           </div>
         </div>
       </div>
-<!--      -->
-      <div class="text-text_main flex justify-between items-center rounded-[5px] overflow-hidden border-[2px] border-secondary2 mt-[30px]">
-        <div class="ml-4">
-          <p><i class="fa fa-info-circle text-title2" aria-hidden="true"></i> Are you a <strong>Pest Management Professional</strong>?</p>
+
+      <div class="text-text_main flex flex-col md:flex-row justify-between items-center rounded-[5px] overflow-hidden border-[2px] border-secondary2 mt-[30px]">
+        <div class="ml-4 p-4">
+          <p class="text-sm md:text-base"><i class="fa fa-info-circle text-title2" aria-hidden="true"></i> Are you a <strong>Pest Management Professional</strong>?</p>
         </div>
-        <div class="flex items-center">
-          <p class="mr-6">You could receive: </p>
-          <ul class="flex gap-4 py-6">
+        <div class="flex flex-col md:flex-row items-center p-4">
+          <p class="mr-6 mb-4 md:mb-0 text-sm md:text-base">You could receive: </p>
+          <ul class="flex flex-col md:flex-row gap-4 py-6 text-sm md:text-base">
             <li><i class="fa fa-check text-orange_1" aria-hidden="true"></i> Volume Discounts</li>
             <li><i class="fa fa-check text-orange_1" aria-hidden="true"></i> Priority Shipping</li>
             <li><i class="fa fa-check text-orange_1" aria-hidden="true"></i> Deals &amp; More</li>
           </ul>
           <button
-            class="ml-4 px-5 py-6 bg-secondary2 text-white cursor-pointer hover:bg-secondary3 hover:text-white">
+            class="ml-4 px-5 py-6 bg-secondary2 text-white cursor-pointer hover:bg-secondary3 hover:text-white text-sm md:text-base">
             View All
           </button>
         </div>
       </div>
-<!--      -->
-<!--      <div>-->
-<!--        <h3 class="text-title text-[30px] text-center py-[30px]">Pest Control Products</h3>-->
-<!--        <div class="grid grid-cols-6 gap-4">-->
-<!--          <div v-for="(item, index) in items" :key="index" class="col-span-1 cursor-pointer group">-->
-<!--            <div>-->
-<!--              <img :src="item.image" :alt="item.alt" class="object-cover">-->
-<!--            </div>-->
-<!--            <div class="font-semibold text-center py-5 text-title group-hover:text-title2">{{ item.title }}</div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="flex justify-center my-4">-->
-<!--        <button-->
-<!--          class="px-5 py-2.5 bg-secondary2  rounded-[5px] text-white cursor-pointer hover:bg-secondary3 hover:text-white">-->
-<!--          View All-->
-<!--        </button>-->
-<!--      </div>-->
-<!--      -->
+
       <div>
-        <h3 class="text-title text-[30px] text-center py-[30px]">Lawn & Garden Products</h3>
-        <div class="grid grid-cols-6 gap-4">
+        <h3 class="text-title text-[24px] md:text-[30px] text-center py-[30px]">Lawn & Garden Products</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           <div v-for="(item, index) in items1" :key="index" class="group col-span-1 cursor-pointer">
             <div>
-              <img :src="item.image" :alt="item.alt" class="object-cover">
+              <img :src="item.image" :alt="item.alt" class="object-cover w-full">
             </div>
-            <div class="font-semibold text-center py-5 text-title group-hover:text-title2">{{ item.title }}</div>
+            <div class="font-semibold text-center py-5 text-title group-hover:text-title2 text-sm md:text-base">{{ item.title }}</div>
           </div>
         </div>
       </div>
+
       <div class="flex justify-center my-4">
         <button
-          class="px-5 py-2.5 bg-secondary2  rounded-[5px] text-white cursor-pointer hover:bg-secondary3 hover:text-white">
+          class="px-5 py-2.5 bg-secondary2 rounded-[5px] text-white cursor-pointer hover:bg-secondary3 hover:text-white text-sm md:text-base">
           View All
         </button>
       </div>
-<!--      -->
-      <div class="grid grid-cols-2 gap-5">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div class="col-span-1 relative max-h-[286px]">
           <div class="w-full h-full">
             <img src="@/assets/images/item5.jpg" class="w-full h-full object-cover" alt="">
           </div>
-          <div class="px-6 text-[20px] absolute bottom-0 w-full h-[88px] text-white bg-primary bg-opacity-60 flex items-center">
-            <h3>Take care of <strong>rats, mice, and other crawling critters </strong>this winter.</h3>
-            <div class="flex justify-center items-center">
-              <button
-                class="flex items-center justify-center h-[40px] w-[200px] text-[16px] px-3 py-2.5 border-[2px] border-white rounded-[5px] text-white cursor-pointer hover:bg-secondary3 ">
+          <div class="px-6 text-[16px] md:text-[20px] absolute bottom-0 w-full h-[88px] text-white bg-primary bg-opacity-60 flex justify-between items-center">
+            <h3 class="flex-1 mr-4">Take care of <strong>rats, mice, and other crawling critters </strong>this winter.</h3>
+            <div class="flex-shrink-0">
+              <button class="whitespace-nowrap text-[14px] md:text-[16px] px-4 py-2 border-2 border-white rounded-[5px] text-white cursor-pointer hover:bg-secondary3 transition duration-300">
                 Rodent Control
               </button>
             </div>
@@ -296,24 +278,35 @@ const products = [
           <div class="w-full h-full">
             <img src="@/assets/images/item4.jpg" class="w-full h-full object-cover" alt="">
           </div>
-          <div class="py-8 text-[20px] absolute top-0 right-0 w-[232px] h-full text-white bg-primary bg-opacity-60 flex flex-col justify-between">
-            <h3 class="text-center">Get ready for spring weeds<strong> NOW!</strong></h3>
-            <div class="flex justify-center">
-              <button
-                class="text-[16px] px-3 py-2.5 border-[2px] border-white rounded-[5px] text-white cursor-pointer hover:bg-secondary3 ">
-                Shop Pre-Emergents
-              </button>
-            </div>
+          <div class="py-6 px-4 text-[16px] md:text-[20px] absolute top-0 right-0 w-[232px] h-full text-white bg-primary bg-opacity-60 flex flex-col items-center justify-between">
+            <h3 class="text-center font-medium">Get ready for spring weeds<strong> NOW!</strong></h3>
+            <button class="whitespace-nowrap text-[14px] md:text-[16px] px-4 py-2 border-2 border-white rounded-[5px] text-white cursor-pointer hover:bg-secondary3 transition duration-300">
+              Shop Pre-Emergents
+            </button>
           </div>
         </div>
       </div>
-<!--      -->
+
       <div>
-        <h3 class="text-title text-[30px] text-center py-[30px] font-bold">Shop All Products</h3>
+        <h3 class="text-title text-[24px] md:text-[30px] text-center py-[30px] font-bold">Shop All Products</h3>
         <swiper
           :modules="[SwiperAutoplay, SwiperPagination, SwiperNavigation]"
           :space-between="20"
-          :slides-per-view="4"
+          :slides-per-view="1"
+          :breakpoints="{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20
+            }
+          }"
           :slides-per-group="4"
           :loop="true"
           :autoplay="{ delay: 2500, disableOnInteraction: false }"
@@ -325,26 +318,26 @@ const products = [
                 <img :src="product.image" :alt="product.name" class="size-full object-cover" />
               </div>
               <div class="text-center">
-                <h3 class="font-semibold text-[15px] line-clamp-1 text-title">{{ product.name }}</h3>
-                <p class="text-gray-500 text-sm line-clamp-1">{{ product.description }}</p>
-                <p class="text-[17px] font-semibold text-title2">{{ product.price }}</p> <!-- Hiển thị giá -->
+                <h3 class="font-semibold text-[13px] md:text-[15px] line-clamp-1 text-title">{{ product.name }}</h3>
+                <p class="text-gray-500 text-xs md:text-sm line-clamp-1">{{ product.description }}</p>
+                <p class="text-[15px] md:text-[17px] font-semibold text-title2">{{ product.price }}</p>
               </div>
               <div
-                class="text-sm font-semibold mt-2 px-4 py-1 border-[2px] border-primary rounded-[5px] text-title cursor-pointer hover:bg-secondary2 hover:text-white">
+                class="text-xs md:text-sm font-semibold mt-2 px-4 py-1 border-[2px] border-primary rounded-[5px] text-title cursor-pointer hover:bg-secondary2 hover:text-white">
                 Buy Now
               </div>
             </div>
           </swiper-slide>
         </swiper>
       </div>
-<!--      -->
+
       <div>
         <div class="text-title p-2.5">
-          <h3 class="text-[30px] pt-[30px]">Can I do my own pest control?</h3>
-          <p class="mt-2">Most people are capable of following a pest management strategy. We provide access to educational resources to help you select, purchase, and use any item in our product line. We carry insect baits, professional insecticides/pesticides, traps, herbicides, and many other helpful professional items.</p>
-          <p class="mt-2">By using recommended professional products instead of a commercial extermination service, you can get rid of pests or rodents at a cost savings of up to 70%</p>
+          <h3 class="text-[24px] md:text-[30px] pt-[30px]">Can I do my own pest control?</h3>
+          <p class="mt-2 text-sm md:text-base">Most people are capable of following a pest management strategy. We provide access to educational resources to help you select, purchase, and use any item in our product line. We carry insect baits, professional insecticides/pesticides, traps, herbicides, and many other helpful professional items.</p>
+          <p class="mt-2 text-sm md:text-base">By using recommended professional products instead of a commercial extermination service, you can get rid of pests or rodents at a cost savings of up to 70%</p>
         </div>
-        <div class="grid grid-cols-2 mt-[30px] gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 mt-[30px] gap-3">
           <div class="rounded-[5px] col-span-1 w-full max-h-[180px] overflow-hidden">
             <img src="@/assets/images/item6.jpg" alt="item" class="size-full object-cover">
           </div>
@@ -352,21 +345,21 @@ const products = [
             <img src="@/assets/images/item7.jpg" alt="item" class="size-full object-cover">
           </div>
         </div>
-        <div class="grid grid-cols-2 mt-4 gap-3">
-          <div class="bg-bg1 col-span-1 text-title text-[20px] flex items-center justify-center py-4 rounded-[5px]">Do-It-Yourself Learning Center Articles <img class="w-[16px]" src="@/assets/icons/next.svg" alt=""></div>
-          <div class="bg-bg1 col-span-1 text-title text-[20px] flex items-center justify-center py-4 rounded-[5px]">Do-It-Yourself Learning Center Articles <img class="w-[16px]" src="@/assets/icons/next.svg" alt=""></div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 mt-4 gap-3">
+          <div class="bg-bg1 col-span-1 text-title text-[16px] md:text-[20px] flex items-center justify-center py-4 rounded-[5px]">Do-It-Yourself Learning Center Articles <img class="w-[16px]" src="@/assets/icons/next.svg" alt=""></div>
+          <div class="bg-bg1 col-span-1 text-title text-[16px] md:text-[20px] flex items-center justify-center py-4 rounded-[5px]">Do-It-Yourself Learning Center Articles <img class="w-[16px]" src="@/assets/icons/next.svg" alt=""></div>
         </div>
       </div>
-<!--      -->
-      <div class="grid grid-cols-2 gap-4 mt-[30px]">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[30px]">
         <div class="col-span-1 text-title p-2.5">
-          <h3 class="text-title text-[30px]">About DIY Pest Control</h3>
-          <p class="mt-2.5">Our website is dedicated to providing DIYers with the information you need to do your own pest control. We provide information on insect identification, insect control instructions, rodent identification, rodent control measures, professional equipment, and information about professional strength insecticides and herbicides.</p>
-          <p class="mt-2.5">Can't find the answer to your pest control question?  We employ expertly trained pest control technicians to advise you.</p>
-          <p class="mt-2.5">We are your best source for professional / commercial grade pest control supplies, approved for both residential and commercial pest control. We ship from both Atlanta, Georgia and Phoenix, Arizona for fast delivery.</p>
+          <h3 class="text-title text-[24px] md:text-[30px]">About DIY Pest Control</h3>
+          <p class="mt-2.5 text-sm md:text-base">Our website is dedicated to providing DIYers with the information you need to do your own pest control. We provide information on insect identification, insect control instructions, rodent identification, rodent control measures, professional equipment, and information about professional strength insecticides and herbicides.</p>
+          <p class="mt-2.5 text-sm md:text-base">Can't find the answer to your pest control question?  We employ expertly trained pest control technicians to advise you.</p>
+          <p class="mt-2.5 text-sm md:text-base">We are your best source for professional / commercial grade pest control supplies, approved for both residential and commercial pest control. We ship from both Atlanta, Georgia and Phoenix, Arizona for fast delivery.</p>
           <div class="flex my-4">
             <button
-              class="text-[20px] px-5 py-2.5 bg-secondary2 text-white cursor-pointer hover:bg-secondary3 hover:text-white">
+              class="text-[16px] md:text-[20px] px-5 py-2.5 bg-secondary2 text-white cursor-pointer hover:bg-secondary3 hover:text-white">
               More About Us
             </button>
           </div>

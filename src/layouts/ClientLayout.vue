@@ -6,7 +6,7 @@ import Footer from "@/components/footer/Footer.vue";
 <template>
   <section class="container">
     <HeaderClient></HeaderClient>
-    <div class="w-full h-[170px]"></div>
+    <div class="w-full h-[100px] lg:h-[170px]"></div>
     <router-view />
     <Footer></Footer>
   </section>
